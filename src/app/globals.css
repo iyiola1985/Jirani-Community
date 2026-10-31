@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #f3eee6;
+  --paper-raised: #fbf7f1;
+  --ink: #1c2421;
+  --ink-soft: #3d4944;
+  --muted: #44524c;
+  --line: #e3d9cc;
+  --lagoon: #1a4742;
+  --lagoon-deep: #102e2b;
+  --mist: #e4eee9;
+  --clay: #9a4328;
+  --sand: #f6edd9;
+  --gold: #8d6b3a;
+  color-scheme: light;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-raised: var(--paper-raised);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-lagoon: var(--lagoon);
+  --color-lagoon-deep: var(--lagoon-deep);
+  --color-mist: var(--mist);
+  --color-clay: var(--clay);
+  --color-sand: var(--sand);
+  --color-gold: var(--gold);
+  --font-sans: var(--font-outfit), sans-serif;
+  --font-serif: var(--font-fraunces), serif;
+}
+
+html {
+  overflow-x: clip;
+}
+
+img,
+video {
+  max-width: 100%;
+}
+
+main {
+  min-width: 0;
+}
+
+body {
+  background:
+    radial-gradient(circle at 0 0, rgb(224 176 122 / 18%), transparent 32rem),
+    var(--paper);
+  color: var(--ink);
+  font-family: var(--font-outfit), sans-serif;
+}
+
+:focus-visible {
+  outline: 2px solid var(--lagoon);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 50;
+  border-radius: 999px;
+  background: white;
+  padding: 0.5rem 1rem;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
