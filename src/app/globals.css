@@ -29,8 +29,8 @@
   --color-clay: var(--clay);
   --color-sand: var(--sand);
   --color-gold: var(--gold);
-  --font-sans: var(--font-outfit), sans-serif;
-  --font-serif: var(--font-fraunces), serif;
+  --font-sans: var(--font-poppins), sans-serif;
+  --font-serif: var(--font-poppins), sans-serif;
 }
 
 html {
@@ -52,7 +52,7 @@ body {
     radial-gradient(circle at 0 0, rgb(224 176 122 / 18%), transparent 32rem),
     var(--paper);
   color: var(--ink);
-  font-family: var(--font-outfit), sans-serif;
+  font-family: var(--font-poppins), sans-serif;
 }
 
 :focus-visible {

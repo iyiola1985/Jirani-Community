@@ -1,13 +1,16 @@
 import type { Metadata } from "next";
-import { Fraunces, Outfit } from "next/font/google";
+import { Poppins } from "next/font/google";
 
 import { Shell } from "@/components/layout/shell";
 import { brand } from "@/config/brand";
 
 import "./globals.css";
 
-const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
-const fraunces = Fraunces({ subsets: ["latin"], variable: "--font-fraunces" });
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-poppins",
+});
 
 export const metadata: Metadata = {
   title: {
@@ -20,7 +23,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${outfit.variable} ${fraunces.variable} h-full`}>
+    <html lang="en" className={`${poppins.variable} h-full`}>
       <body className="min-h-full antialiased">
         <Shell>{children}</Shell>
       </body>

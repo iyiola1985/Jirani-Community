@@ -14,35 +14,34 @@ export default function HomePage() {
   return (
     <div>
       <section>
-        <div className="relative aspect-video w-full overflow-hidden">
+        <div className="relative flex min-h-[28rem] items-center overflow-hidden sm:min-h-[34rem]">
           <img
             alt=""
             src="/hero-family.jpg"
             width={1024}
             height={576}
             decoding="async"
-            className="pointer-events-none absolute inset-0 h-full w-full object-cover object-center"
+            className="pointer-events-none absolute inset-0 h-full w-full object-cover object-[center_42%]"
           />
           <div
             aria-hidden="true"
             className="pointer-events-none absolute inset-0"
             style={{
               background:
-                "linear-gradient(to bottom, var(--paper) 0%, transparent 16%, transparent 70%, var(--paper) 100%), linear-gradient(to right, var(--paper) 0%, rgb(243 238 230 / 0.72) 8%, transparent 26%)",
+                "linear-gradient(to bottom, rgb(16 30 28 / 0.28), rgb(16 30 28 / 0.42) 48%, rgb(16 30 28 / 0.55))",
             }}
           />
-        </div>
-        <div className="relative mx-auto -mt-12 grid w-full max-w-6xl gap-10 px-4 pb-14 sm:-mt-16 sm:px-6 lg:grid-cols-[1.2fr_0.8fr]">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-gold">Kenya · Community assistance</p>
-            <h1 className="mt-4 max-w-xl font-serif text-4xl leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
+          <div className="relative mx-auto w-full max-w-3xl px-4 py-16 text-center sm:px-6" style={{ textShadow: "0 1px 16px rgb(16 30 28 / 0.45)" }}>
+            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#e4c08a]">Kenya · Community assistance</p>
+            <h1 className="mt-4 font-serif text-4xl leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl">
               Help that stays close, and on the record.
             </h1>
-            <p className="mt-6 max-w-xl text-lg leading-8 text-ink-soft">
+            <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-white/90">
               Jirani means neighbour. People ask for support here, and others give it, with private documents kept private and every shilling written down before anyone is paid.
             </p>
           </div>
-          <div className="grid gap-4">
+        </div>
+        <div className="mx-auto grid w-full max-w-6xl gap-4 px-4 py-14 sm:px-6 md:grid-cols-2">
             <article className={`${panelClass} border-lagoon/30`}>
               <p className="text-sm font-semibold text-lagoon">Get help</p>
               <h2 className="mt-2 font-serif text-3xl">Request assistance</h2>
@@ -63,7 +62,6 @@ export default function HomePage() {
                 Browse requests
               </Link>
             </article>
-          </div>
         </div>
       </section>
 
