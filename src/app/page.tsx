@@ -13,37 +13,57 @@ import { getDemoBook } from "@/server/book";
 export default function HomePage() {
   return (
     <div>
-      <section className="mx-auto grid w-full max-w-6xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.2fr_0.8fr] lg:py-20">
-        <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.16em] text-gold">Kenya · Community assistance</p>
-          <h1 className="mt-4 max-w-xl font-serif text-4xl leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
-            Help that stays close, and on the record.
-          </h1>
-          <p className="mt-6 max-w-xl text-lg leading-8 text-ink-soft">
-            Jirani means neighbour. People ask for support here, and others give it, with private documents kept private and every shilling written down before anyone is paid.
-          </p>
+      <section>
+        <div className="relative aspect-video w-full overflow-hidden">
+          <img
+            alt=""
+            src="/hero-family.jpg"
+            width={1024}
+            height={576}
+            decoding="async"
+            className="pointer-events-none absolute inset-0 h-full w-full object-cover object-center"
+          />
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(to bottom, var(--paper) 0%, transparent 16%, transparent 70%, var(--paper) 100%), linear-gradient(to right, var(--paper) 0%, rgb(243 238 230 / 0.72) 8%, transparent 26%)",
+            }}
+          />
         </div>
-        <div className="grid gap-4">
-          <article className={`${panelClass} border-lagoon/30`}>
-            <p className="text-sm font-semibold text-lagoon">Get help</p>
-            <h2 className="mt-2 font-serif text-3xl">Request assistance</h2>
-            <p className="mt-3 text-sm leading-6 text-ink-soft">
-              Food, rent, electricity, cooking gas, school costs, medical bills, or funeral expenses. Creating an account, submitting a request, and verification are free.
+        <div className="relative mx-auto -mt-12 grid w-full max-w-6xl gap-10 px-4 pb-14 sm:-mt-16 sm:px-6 lg:grid-cols-[1.2fr_0.8fr]">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-gold">Kenya · Community assistance</p>
+            <h1 className="mt-4 max-w-xl font-serif text-4xl leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
+              Help that stays close, and on the record.
+            </h1>
+            <p className="mt-6 max-w-xl text-lg leading-8 text-ink-soft">
+              Jirani means neighbour. People ask for support here, and others give it, with private documents kept private and every shilling written down before anyone is paid.
             </p>
-            <Link href="/register" className={`${primaryButton} mt-5`}>
-              Start a request
-            </Link>
-          </article>
-          <article className={panelClass}>
-            <p className="text-sm font-semibold text-clay">Give help</p>
-            <h2 className="mt-2 font-serif text-3xl">Contribute</h2>
-            <p className="mt-3 text-sm leading-6 text-ink-soft">
-              Browse verified requests and time-limited campaigns. Any fee is shown before you confirm. This demonstration does not move money.
-            </p>
-            <Link href="/requests" className={`${clayButton} mt-5`}>
-              Browse requests
-            </Link>
-          </article>
+          </div>
+          <div className="grid gap-4">
+            <article className={`${panelClass} border-lagoon/30`}>
+              <p className="text-sm font-semibold text-lagoon">Get help</p>
+              <h2 className="mt-2 font-serif text-3xl">Request assistance</h2>
+              <p className="mt-3 text-sm leading-6 text-ink-soft">
+                Food, rent, electricity, cooking gas, school costs, medical bills, or funeral expenses. Creating an account, submitting a request, and verification are free.
+              </p>
+              <Link href="/register" className={`${primaryButton} mt-5`}>
+                Start a request
+              </Link>
+            </article>
+            <article className={panelClass}>
+              <p className="text-sm font-semibold text-clay">Give help</p>
+              <h2 className="mt-2 font-serif text-3xl">Contribute</h2>
+              <p className="mt-3 text-sm leading-6 text-ink-soft">
+                Browse verified requests and time-limited campaigns. Any fee is shown before you confirm. This demonstration does not move money.
+              </p>
+              <Link href="/requests" className={`${clayButton} mt-5`}>
+                Browse requests
+              </Link>
+            </article>
+          </div>
         </div>
       </section>
 

@@ -2,8 +2,7 @@ import Link from "next/link";
 import { Suspense } from "react";
 
 import { Logo } from "@/components/brand/logo";
-import { AuthMenu } from "@/components/layout/auth-menu";
-import { quietButton } from "@/components/ui/styles";
+import { AuthMenu, headerPrimaryButton, headerQuietButton } from "@/components/layout/auth-menu";
 import { brand } from "@/config/brand";
 
 const links = [
@@ -26,7 +25,14 @@ export function SiteHeader() {
             </Link>
           ))}
         </nav>
-        <Suspense fallback={<span className={`${quietButton} pointer-events-none opacity-70`}>Account</span>}>
+        <Suspense
+          fallback={
+            <span className="flex max-w-full flex-wrap items-center justify-end gap-2">
+              <span className={`${headerQuietButton} pointer-events-none opacity-70`}>Sign in</span>
+              <span className={`${headerPrimaryButton} pointer-events-none opacity-70`}>Register</span>
+            </span>
+          }
+        >
           <AuthMenu />
         </Suspense>
       </div>

@@ -35,6 +35,7 @@
 
 html {
   overflow-x: clip;
+  scrollbar-gutter: stable;
 }
 
 img,

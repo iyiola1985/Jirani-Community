@@ -3,9 +3,9 @@ import Link from "next/link";
 import { logoutAction } from "@/server/actions/auth";
 import { getActor } from "@/server/session";
 
-const headerQuietButton =
+export const headerQuietButton =
   "inline-flex min-h-11 items-center justify-center rounded-full border border-line bg-paper-raised px-3 text-sm font-semibold text-ink hover:bg-mist sm:px-4";
-const headerPrimaryButton =
+export const headerPrimaryButton =
   "inline-flex min-h-11 items-center justify-center rounded-full bg-lagoon px-3 text-sm font-semibold text-white hover:bg-lagoon-deep sm:px-4";
 
 export async function AuthMenu() {
